@@ -30,7 +30,10 @@ const swiper = new Swiper("#swiper", {
   direction: "horizontal",
   loop: true,
   slidesPerView: "auto",
-  spaceBetween: 30,
+  keyboard: {
+    enabled: true,
+  },
+  spaceBetween: 20,
 
   // If we need pagination
   pagination: {
