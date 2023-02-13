@@ -67,3 +67,24 @@ const swiper2 = new Swiper("#swiper-2", {
     prevEl: "#is-left-2",
   },
 });
+const swiper3 = new Swiper("#swiper-3", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: "auto",
+  keyboard: {
+    enabled: true,
+  },
+  spaceBetween: 20,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: "#is-right-2",
+    prevEl: "#is-left-2",
+  },
+});
