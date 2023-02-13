@@ -63,7 +63,7 @@ const swiper2 = new Swiper("#swiper-2", {
 
   // Navigation arrows
   navigation: {
-    nextEl: "#is-right",
-    prevEl: "#is-left",
+    nextEl: "#is-right-2",
+    prevEl: "#is-left-2",
   },
 });
