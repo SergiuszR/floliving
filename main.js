@@ -29,7 +29,7 @@ const swiper = new Swiper("#swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  slidesPerView: 4,
+  slidesPerView: "auto",
   keyboard: {
     enabled: true,
   },
