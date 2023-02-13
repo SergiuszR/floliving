@@ -29,6 +29,9 @@ const swiper = new Swiper("#swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
+  autoplay: {
+    delay: 3000,
+  },
   slidesPerView: "auto",
   keyboard: {
     enabled: true,
@@ -51,6 +54,9 @@ const swiper2 = new Swiper("#swiper-2", {
   direction: "horizontal",
   loop: true,
   slidesPerView: "auto",
+  autoplay: {
+    delay: 3000,
+  },
   keyboard: {
     enabled: true,
   },
@@ -72,6 +78,9 @@ const swiper3 = new Swiper("#swiper-3", {
   direction: "horizontal",
   loop: true,
   slidesPerView: "auto",
+  autoplay: {
+    delay: 3000,
+  },
   keyboard: {
     enabled: true,
   },
