@@ -83,6 +83,7 @@ const radioBtns = document.querySelectorAll("input[type='radio']");
 const addToCartBtn = document.querySelector("[data-trigger='cart']");
 form.reset();
 radioBtns.forEach((radioButton) => {
+  radioButton.setAttribute("autocomplete", "off");
   radioButton.addEventListener("change", () => {
     const link = radioButton.getAttribute("data-link");
     console.log(link);
