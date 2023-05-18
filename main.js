@@ -76,3 +76,15 @@ try {
     },
   });
 } catch (err) {}
+
+// radio logic
+
+const radioBtns = document.querySelectorAll("input[type='radio']");
+const addToCartBtn = document.querySelector("[data-trigger='cart']");
+
+radioBtns.forEach((radioButton) => {
+  radioButton.addEventListener("change", () => {
+    const link = radioButton.getAttribute("data-link");
+    addToCartBtn.setAttribute("href", link);
+  });
+});
