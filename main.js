@@ -85,6 +85,7 @@ const addToCartBtn = document.querySelector("[data-trigger='cart']");
 radioBtns.forEach((radioButton) => {
   radioButton.addEventListener("change", () => {
     const link = radioButton.getAttribute("data-link");
+    console.log(link);
     addToCartBtn.setAttribute("href", link);
   });
 });
