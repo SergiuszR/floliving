@@ -78,10 +78,10 @@ try {
 } catch (err) {}
 
 // radio logic
-
+const form = document.querySelector("form");
 const radioBtns = document.querySelectorAll("input[type='radio']");
 const addToCartBtn = document.querySelector("[data-trigger='cart']");
-
+form.reset();
 radioBtns.forEach((radioButton) => {
   radioButton.addEventListener("change", () => {
     const link = radioButton.getAttribute("data-link");
