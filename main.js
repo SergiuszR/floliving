@@ -77,6 +77,8 @@ try {
   });
 } catch (err) {}
 
+console.log("dd");
+
 // radio logic
 const form = document.querySelector("form");
 const radioBtns = document.querySelectorAll("input[type='radio']");
