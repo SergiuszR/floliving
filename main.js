@@ -89,3 +89,6 @@ radioBtns.forEach((radioButton) => {
     addToCartBtn.setAttribute("href", link);
   });
 });
+
+window._klOnsite = window._klOnsite || [];
+window._klOnsite.push(["openForm", "Sy4cC5"]);
