@@ -90,5 +90,7 @@ radioBtns.forEach((radioButton) => {
   });
 });
 
-window._klOnsite = window._klOnsite || [];
-window._klOnsite.push(["openForm", "Sy4cC5"]);
+document.getElementById("newsletter-trigger").addEventListener("click", function () {
+  window._klOnsite = window._klOnsite || [];
+  window._klOnsite.push(["openForm", "Sy4cC5"]);
+});
