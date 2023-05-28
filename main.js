@@ -90,14 +90,12 @@ radioBtns.forEach((radioButton) => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const optionsBox = document.querySelector(".product__details-options-box");
-
-  if (radioBtns.length > 1) {
-    radioBtns[0].checked = true;
-    addToCartBtn.href = radioBtns[0].dataset.link;
-  }
-});
+const optionsBox = document.querySelector(".product__details-options-box");
+if (radioBtns.length < 2) {
+  console.log(radioBtns[0]);
+  radioBtns[0].previousElementSibling.classList.toggle("w--redirected-checked", true);
+  addToCartBtn.href = radioBtns[0].getAttribute("data-link");
+}
 
 document.getElementById("newsletter-trigger").addEventListener("click", function () {
   window._klOnsite = window._klOnsite || [];
