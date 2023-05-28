@@ -90,6 +90,15 @@ radioBtns.forEach((radioButton) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const optionsBox = document.querySelector(".product__details-options-box");
+
+  if (radioBtns.length > 1) {
+    radioBtns[0].checked = true;
+    addToCartBtn.href = radioBtns[0].dataset.link;
+  }
+});
+
 document.getElementById("newsletter-trigger").addEventListener("click", function () {
   window._klOnsite = window._klOnsite || [];
   window._klOnsite.push(["openForm", "Sy4cC5"]);
