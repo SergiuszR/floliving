@@ -91,10 +91,11 @@ radioBtns.forEach((radioButton) => {
 });
 
 const optionsBox = document.querySelector(".product__details-options-box");
-if (radioBtns.length < 2) {
-  console.log(radioBtns[0]);
-  radioBtns[0].previousElementSibling.classList.toggle("w--redirected-checked", true);
-  addToCartBtn.href = radioBtns[0].getAttribute("data-link");
+const checkedRadioBtn = radioBtns.length === 1 ? radioBtns[0] : Array.from(radioBtns).find((btn) => btn.labels[0].textContent.match(/subscribe/i));
+if (checkedRadioBtn) {
+  console.log(checkedRadioBtn);
+  checkedRadioBtn.previousElementSibling.classList.toggle("w--redirected-checked", true);
+  addToCartBtn.href = checkedRadioBtn.getAttribute("data-link");
 }
 
 document.getElementById("newsletter-trigger").addEventListener("click", function () {
