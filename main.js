@@ -6,6 +6,7 @@ try {
   const swiper = new Swiper("#swiper", {
     // Optional parameters
     direction: "horizontal",
+    freeMode: true,
     loop: true,
     autoplay: {
       delay: 5000,
