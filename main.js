@@ -95,7 +95,8 @@ radioBtns.forEach((radioButton) => {
 });
 
 const optionsBox = document.querySelector(".product__details-options-box");
-const checkedRadioBtn = radioBtns.length === 1 ? radioBtns[0] : Array.from(radioBtns).find((btn) => btn.labels[0].textContent.match(/subscribe/i));
+const checkedRadioBtn = radioBtns.length === 1 ? radioBtns[0] : Array.from(radioBtns).find((btn) => btn.labels[0].textContent.match(/subscribe|subscription/i));
+
 if (checkedRadioBtn) {
   checkedRadioBtn.previousElementSibling.classList.toggle("w--redirected-checked", true);
   addToCartBtn.href = checkedRadioBtn.getAttribute("data-link");
