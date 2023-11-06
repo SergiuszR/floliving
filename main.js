@@ -82,24 +82,30 @@ try {
 } catch (err) {}
 
 // radio logic
-const form = document.querySelector("form");
-const radioBtns = document.querySelectorAll("input[type='radio']");
-const addToCartBtn = document.querySelector("[data-trigger='cart']");
-form.reset();
-radioBtns.forEach((radioButton) => {
-  radioButton.setAttribute("autocomplete", "off");
-  radioButton.addEventListener("change", () => {
-    const link = radioButton.getAttribute("data-link");
-    addToCartBtn.setAttribute("href", link);
+let form = $("form");
+
+if (form.length) {
+  form[0].reset();
+
+  let radioBtns = $("input[type='radio']");
+  let addToCartBtn = $("[data-trigger='cart']");
+
+  radioBtns.each((i, radioButton) => {
+    $(radioButton).attr("autocomplete", "off");
+    $(radioButton).change(() => {
+      let link = $(radioButton).attr("data-link");
+      addToCartBtn.attr("href", link);
+    });
   });
-});
 
-const optionsBox = document.querySelector(".product__details-options-box");
-const checkedRadioBtn = radioBtns.length === 1 ? radioBtns[0] : Array.from(radioBtns).find((btn) => btn.labels[0].textContent.match(/subscribe|subscription/i));
+  if (radioBtns.length) {
+    let checkedRadioBtn = radioBtns.length === 1 ? radioBtns[0] : Array.from(radioBtns).find((btn) => $(btn)[0].labels[0].textContent.match(/subscribe|subscription/i));
 
-if (checkedRadioBtn) {
-  checkedRadioBtn.previousElementSibling.classList.toggle("w--redirected-checked", true);
-  addToCartBtn.href = checkedRadioBtn.getAttribute("data-link");
+    if (checkedRadioBtn && addToCartBtn.length) {
+      $(checkedRadioBtn).prev().toggleClass("w--redirected-checked", true);
+      addToCartBtn.attr("href", $(checkedRadioBtn).attr("data-link"));
+    }
+  }
 }
 
 document.getElementById("newsletter-trigger").addEventListener("click", function () {
